@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t moabdelaziz1/test-jenk-img .'
+        sh 'docker build -t moabdelaziz1/jenkins-casc:jv17 .'
       }
     }
     stage('Run') {
@@ -21,7 +21,7 @@ pipeline {
     }
     stage('DockerPush') {
       steps {
-        sh 'docker push moabdelaziz1/test-jenk-img .'
+        sh 'docker push moabdelaziz1/jenkins-casc:jv17'
       }
     }
   }
